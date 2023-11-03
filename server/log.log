@@ -1,0 +1,313 @@
+2021-Jun-16 00:27:57 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 00:27:57 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 00:28:01 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 00:28:01 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 00:28:02 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 00:28:02 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 00:28:02 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 00:28:02 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 00:28:08 AM [Thread-1] WARN  org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:172) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:107) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:116) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:41) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:58) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:341) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:260) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:238) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:379) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:98) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:73) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:107) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:145) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:86) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:479) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:85) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:689) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724) [hibernate-core-5.4.30.Final.jar:5.4.30.Final]
+	at db.DBTools.<clinit>(DBTools.java:13) [main/:?]
+	at db.UserDB.getByuserName(UserDB.java:39) [main/:?]
+	at Connection.run(Connection.java:85) [main/:?]
+2021-Jun-16 00:28:08 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 00:28:08 AM [Thread-1] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 3D000
+2021-Jun-16 00:28:08 AM [Thread-1] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - FATAL: database "SeaBattle" does not exist
+2021-Jun-16 00:36:23 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 00:36:23 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 00:36:24 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 00:36:24 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 00:36:24 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 00:36:24 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 00:36:24 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 00:36:24 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 00:36:25 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 00:36:26 AM [Thread-1] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: model.User (class must be instantiated by Interceptor)
+2021-Jun-16 00:36:26 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7681ea57] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 00:36:26 AM [Thread-1] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2021-Jun-16 00:36:26 AM [Thread-1] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - constraint "uk_mmns67o5v4bfippoqitu4v3t6" of relation "users" does not exist, skipping
+2021-Jun-16 00:36:26 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 00:39:10 AM [Thread-1] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2021-Jun-16 00:39:10 AM [Thread-1] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "uk_mmns67o5v4bfippoqitu4v3t6"
+  Detail: Key (username)=(x) already exists.
+2021-Jun-16 00:40:27 AM [Thread-3] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2021-Jun-16 00:40:27 AM [Thread-3] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "uk_mmns67o5v4bfippoqitu4v3t6"
+  Detail: Key (username)=(x) already exists.
+2021-Jun-16 00:58:08 AM [Thread-4] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 00:58:09 AM [Thread-4] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 00:58:10 AM [Thread-4] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 00:58:10 AM [Thread-4] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 00:58:10 AM [Thread-4] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 00:58:10 AM [Thread-4] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 00:58:10 AM [Thread-4] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 00:58:10 AM [Thread-4] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 00:58:10 AM [Thread-4] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 00:58:11 AM [Thread-4] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: model.User (class must be instantiated by Interceptor)
+2021-Jun-16 00:58:11 AM [Thread-4] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@952ced6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 00:58:12 AM [Thread-4] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 00:58:12 AM [Thread-4] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2021-Jun-16 00:58:12 AM [Thread-4] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "uk_mmns67o5v4bfippoqitu4v3t6"
+  Detail: Key (username)=(x) already exists.
+2021-Jun-16 01:01:11 AM [Thread-6] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2021-Jun-16 01:01:12 AM [Thread-6] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "uk_mmns67o5v4bfippoqitu4v3t6"
+  Detail: Key (username)=(x) already exists.
+2021-Jun-16 01:02:58 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 01:02:59 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 01:03:01 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 01:03:02 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 01:03:03 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 01:03:03 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 01:03:03 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 01:03:03 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 01:03:04 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 01:03:12 AM [Thread-1] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: model.User (class must be instantiated by Interceptor)
+2021-Jun-16 01:03:13 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5829adc9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 01:03:13 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 01:11:44 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 01:11:44 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 01:11:45 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 01:11:45 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 01:11:45 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 01:11:45 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 01:11:45 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 01:11:45 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 01:11:46 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 01:11:46 AM [Thread-1] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: model.User (class must be instantiated by Interceptor)
+2021-Jun-16 01:11:47 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@65e83266] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 01:11:47 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 01:33:30 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 01:33:31 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 01:33:31 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 01:33:32 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 01:33:32 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 01:33:32 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 01:33:32 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 01:33:32 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 01:33:32 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 01:33:33 AM [Thread-1] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: model.User (class must be instantiated by Interceptor)
+2021-Jun-16 01:33:33 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@759f5df9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 01:33:33 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 01:35:36 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 01:35:36 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 01:35:36 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 01:35:37 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 01:35:37 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 01:35:37 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 01:35:37 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 01:35:37 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 01:35:37 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 01:35:38 AM [Thread-1] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: model.User (class must be instantiated by Interceptor)
+2021-Jun-16 01:35:38 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3274122a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 01:35:38 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 01:39:10 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 01:39:10 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 01:39:11 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 01:39:11 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 01:39:11 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 01:39:11 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 01:39:11 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 01:39:11 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 01:39:11 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 01:39:12 AM [Thread-1] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: model.User (class must be instantiated by Interceptor)
+2021-Jun-16 01:39:12 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@72ca11c9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 01:39:12 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 01:46:30 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 01:46:30 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 01:46:30 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 01:46:30 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 01:46:30 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 01:46:30 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 01:46:30 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 01:46:30 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 01:46:31 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 01:46:31 AM [Thread-1] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: model.User (class must be instantiated by Interceptor)
+2021-Jun-16 01:46:32 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3274122a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 01:46:32 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 01:57:58 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 01:57:58 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 01:57:59 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 01:57:59 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 01:57:59 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 01:57:59 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 01:57:59 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 01:57:59 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 01:57:59 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 01:58:00 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3681d17b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 01:58:00 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 02:00:09 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 02:00:09 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 02:00:10 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 02:00:10 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 02:00:10 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 02:00:10 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 02:00:10 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 02:00:10 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 02:00:10 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 02:00:11 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@281266c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 02:00:11 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 02:37:17 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 02:37:19 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 02:37:24 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 02:37:26 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 02:37:26 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 02:37:26 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 02:37:26 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 02:37:26 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 02:37:30 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 02:37:34 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@69fff536] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 02:37:37 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 03:00:41 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 03:00:41 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 03:00:42 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 03:00:43 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 03:00:43 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 03:00:43 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 03:00:43 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 03:00:43 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 03:00:43 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 03:00:45 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@54c0b1aa] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 03:00:45 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 03:07:16 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 03:07:16 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 03:07:19 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 03:07:19 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 03:07:19 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 03:07:19 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 03:07:19 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 03:07:19 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 03:07:21 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 03:07:24 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@42b8795d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 03:07:24 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 03:09:19 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 03:09:19 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 03:09:19 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 03:09:19 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 03:09:19 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 03:09:19 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 03:09:19 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 03:09:19 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 03:09:19 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 03:09:20 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@250e3ae6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 03:09:20 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 03:11:30 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 03:11:30 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 03:11:31 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 03:11:31 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 03:11:31 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 03:11:31 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 03:11:31 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 03:11:31 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 03:11:31 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 03:11:32 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@57a03e34] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 03:11:32 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 04:19:57 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 04:19:57 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 04:19:59 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 04:20:00 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 04:20:00 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 04:20:00 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 04:20:00 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 04:20:00 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 04:20:00 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 04:20:01 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1e6110e9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 04:20:01 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 04:26:07 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 04:26:07 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 04:26:08 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 04:26:08 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 04:26:08 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 04:26:08 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 04:26:08 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 04:26:08 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 04:26:08 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 04:26:09 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@41bb0e95] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 04:26:09 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 04:59:47 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 04:59:48 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 04:59:49 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 04:59:49 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 04:59:49 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 04:59:49 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 04:59:49 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 04:59:49 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 04:59:50 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 04:59:52 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2532c1ad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 04:59:52 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-16 05:08:14 AM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-16 05:08:15 AM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-16 05:08:16 AM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-16 05:08:16 AM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-16 05:08:16 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-16 05:08:16 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-16 05:08:16 AM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-16 05:08:16 AM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-16 05:08:16 AM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-16 05:08:17 AM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@41f52f93] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-16 05:08:17 AM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-Jun-19 15:31:14 PM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-Jun-19 15:31:14 PM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-Jun-19 15:31:16 PM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-Jun-19 15:31:17 PM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-Jun-19 15:31:17 PM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2021-Jun-19 15:31:17 PM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2021-Jun-19 15:31:17 PM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-Jun-19 15:31:17 PM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2021-Jun-19 15:31:19 PM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-Jun-19 15:31:22 PM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@32fa1c04] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-Jun-19 15:31:22 PM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-Nov-03 13:30:26 PM [Thread-1] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2023-Nov-03 13:30:26 PM [Thread-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.30.Final
+2023-Nov-03 13:30:27 PM [Thread-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-Nov-03 13:30:28 PM [Thread-1] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2023-Nov-03 13:30:28 PM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/SeaBattle]
+2023-Nov-03 13:30:28 PM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2023-Nov-03 13:30:28 PM [Thread-1] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2023-Nov-03 13:30:28 PM [Thread-1] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 2 (min=1)
+2023-Nov-03 13:30:28 PM [Thread-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2023-Nov-03 13:30:29 PM [Thread-1] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7adcf8be] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2023-Nov-03 13:30:29 PM [Thread-1] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2023-Nov-03 13:30:29 PM [Thread-1] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - constraint "uk_r43af9ap4edm43mmtq01oddj6" of relation "users" does not exist, skipping
+2023-Nov-03 13:30:29 PM [Thread-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
